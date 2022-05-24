@@ -11,31 +11,52 @@
     </head>
     <body>
         <h1>Welcome to the BookStore Application</h1>
-        <h1>@DateTime.Now</h1>
 
-        <h1>Sum = @(3 + 5)</h1>
+       @* IF STATEMENTS*@
 
-        <hr />
+        @*
+         @{
+            int a = 10;
+        }
+        @if(a == 5 )
+        {
+            a++;
+        <h1>Hello From If Block and the value is = @a</h1>
+        }
+        else if (a ==10)
+        {
+            <h1>Hello From Else if Block</h1>
+        }
+        else
+        {   
+            <h1>Hello From Else Block</h1>
+        }*@
 
-        <h4>Multiline Syntax</h4>
+        @*Ternary Operator (Condition) ? Logic@True : Logic@False *@
+        @* @{
+            int a = 9;
+            int b = 0;
+        }
+        <h1>Ternary - @(a==10 ? b=10 : b=5 )</h1>
+        <h1>Value of b = @b</h1>*@
 
+        @*Switch Statement*@
         @{
             int a = 10;
-            int b = 20;
-            int c = a + b;
+        }
+        @switch (a)
+        {
+            case 1:<h1>I am 1 </h1>
+                 break;
+            case 2:<h1>I am 2 </h1>
+                 break;
+            case 3:<h1>I am 3 </h1>
+                 break;
+            case 4:<h1>I am 4 </h1>
+                 break;
+            default: <h1>I am default</h1>
+                 break;
         }
 
-        <h1>@c</h1>
-
-        
-        <h4>Email Demo Syntax</h4>
-
-        <h2>My email - percy@nws.com</h2>
-
-        
-        <h4>Escape Sequence Syntax</h4>
-        <h2>My Twitter - @@MOTAUNG_TP</h2>
-
-        <P>This is the home page of our Book Store Application</P>
     </body>
 </html>
