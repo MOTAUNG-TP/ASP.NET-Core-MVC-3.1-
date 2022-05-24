@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <h1>Welcome to the BookStore Application</h1>
+        <h1>@DateTime.Now</h1>
+
+        <h1>Sum = @(3 + 5)</h1>
+
+        <hr />
+
+        <h4>Multiline Syntax</h4>
+
+        @{
+            int a = 10;
+            int b = 20;
+            int c = a + b;
+        }
+
+        <h1>@c</h1>
+
+        
+        <h4>Email Demo Syntax</h4>
+
+        <h2>My email - percy@nws.com</h2>
+
+        
+        <h4>Escape Sequence Syntax</h4>
+        <h2>My Twitter - @@MOTAUNG_TP</h2>
+
+        <P>This is the home page of our Book Store Application</P>
+    </body>
+</html>
