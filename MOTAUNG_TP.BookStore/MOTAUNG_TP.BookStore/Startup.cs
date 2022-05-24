@@ -27,6 +27,8 @@ namespace MOTAUNG_TP.BookStore
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

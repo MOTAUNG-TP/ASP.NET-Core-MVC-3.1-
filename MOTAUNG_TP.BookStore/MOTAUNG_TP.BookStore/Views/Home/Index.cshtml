@@ -8,26 +8,25 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>Index</title>
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
     </head>
-    <body>
+    <body class="container">
 
-        <h1>Welcome to the BookStore Application</h1>
+        <img src="~/images/Percy.png" alt="Percy" class="logo" />
 
-        @*For Loop*@
-        @*@for (int i = 0; i < 10; i++)
-        {
-            <h2>Hello from for loop index = @i</h2>
-        }*@
+        <input type="button" value="click me" class="btn btn-danger"/>
 
-        @*For Each Loop*@
-        @{
-            var list = new List<int>() { 1, 2, 3, 4, 5 };
-        }
+        <h1 class="h1">Welcome to the BookStore Application</h1>
 
-        @foreach(var item in list)
-        {
-            <h2>@item</h2>
-        }
 
     </body>
+    
+        <script src="~/lib/jquery/jquery.js"  /></script>
 </html>
+
+<script>
+$(document).ready(function() {
+    alert("Page Loaded");
+});
+</script>
