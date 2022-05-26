@@ -30,31 +30,36 @@ namespace MOTAUNG_TP.BookStore.Repository
                 {
                     Id = 1,
                     Title = "MVC Book",
-                    Author = "Percy"
+                    Author = "Percy",
+                    Description = "Detailed MVC Course for Beginners"
                 },
                 new BookModel()
                 {
                     Id = 2,
                     Title = "C# Book",
-                    Author = "Thato"
+                    Author = "Thato",
+                    Description = "Advanced C-Sharp Postgraduate Edition"
                 },
                 new BookModel()
                 {
                     Id = 3,
                     Title = "Java Book",
-                    Author = "Percy"
+                    Author = "Percy",
+                    Description = "Introduction to mobile development with Java"
                 },
                 new BookModel()
                 {
                     Id = 4,
                     Title = "PHP Book",
-                    Author = "Motaung TP"
+                    Author = "Motaung TP",
+                    Description = "OBject Oriented Programming with Laravel"
                 },
                 new BookModel()
                 {
                     Id = 5,
                     Title = "C# Book",
-                    Author = "Percy"
+                    Author = "Percy",
+                    Description = "C-Sharp Fundamentals for Intermediate Level Learning"
                 },
             };
          }

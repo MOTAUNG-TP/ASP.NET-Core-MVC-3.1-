@@ -1,16 +1,32 @@
-﻿@{
-    Layout = null;
+﻿@using MOTAUNG_TP.BookStore.Models
+@model IEnumerable<BookModel>
+@{
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>Books</title>
-    </head>
-    <body>
-        <h1>List of All Books</h1>
-        <button>Click me</button>
-    </body>
-</html>
+<div class="container">
+    <h3 class="display-4">All Books</h3>
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="col-4">
+                <div class="card" style="width: 18rem; margin-bottom:30px;">
+                    <img class="card-img-top" src="~/images/default.jpg" height="200" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">@book.Title</h5>
+                    <p class="card-text">@book.Description</p>
+                    <div class="row">
+                        <div class="col-7">
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="col-5">
+                             <small class="text-muted">@book.Author</small>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
