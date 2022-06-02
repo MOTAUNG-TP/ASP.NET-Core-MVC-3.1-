@@ -6,25 +6,33 @@ namespace MOTAUNG_TP.BookStore.Controllers
 {
     public class HomeController : Controller
     {
+
+        //Using ViewData Attribute
+        [ViewData]
+        public string CustomProperty { get; set; }
+
+        [ViewData]
+        public string Title { get; set; }
+
+        [ViewData]
+        public BookModel Book { get; set; }
         public ViewResult Index()
         {
-            //Passing data and annonimus types to the view using ViewBags.
-            ViewBag.Title = "MOTAUNG_TP";
+            //Using ViewData
+            ViewData["property1"] = "Percy Motaung";
 
-            dynamic data = new ExpandoObject();
-            data.Id = 1;
-            data.Name = "Percy";
-
-            ViewBag.Data = data;
-
-            //Passing Objects as models to the views using ViewBags
-            ViewBag.Type = new BookModel() {Id = 5, Author = "This is the author" };
-                
+            ViewData["book"] = new BookModel() { Author = "Percy", Id = 1 };
             return View();
         }
 
         public ViewResult AboutUs()
         {
+            //Using ViewData Attribute
+            CustomProperty = "Custom Property";
+            Title = "About Us - Controller";
+
+            Book = new BookModel() { Id = 2, Title = "IONIC Tutorial" };
+
             return View();
         }
 
