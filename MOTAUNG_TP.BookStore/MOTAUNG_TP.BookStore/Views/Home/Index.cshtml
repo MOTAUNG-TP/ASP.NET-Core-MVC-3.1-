@@ -1,11 +1,13 @@
 ﻿@{
-    Layout = "_Layout";
+    dynamic data = ViewBag.Data;
 }
-
 <section class="jumbotron text-center" style="background-color:whitesmoke">
     <div class="container">
-        <h1>Welcome to Bookstore</h1>
+        <h1>Welcome to Bookstore @ViewBag.Title</h1>
         <p class="lead text-muted">
+             @data.Id  @data.Name <br />
+             Id = @ViewBag.Type.Id <br />
+             Name = @ViewBag.Type.Author<br />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
@@ -18,7 +20,7 @@
 @section scripts{
     <script>
         $(document).ready(function() {
-            alert("Document is Ready")
+           // alert("Document is Ready")
         });
     </script>
 }

@@ -31,35 +31,60 @@ namespace MOTAUNG_TP.BookStore.Repository
                     Id = 1,
                     Title = "MVC Book",
                     Author = "Percy",
-                    Description = "Detailed MVC Course for Beginners"
+                    Description = "Detailed MVC Course for Beginners",
+                    Category = "Software Design",
+                    Language = "English",
+                    TotalPages = 134
                 },
                 new BookModel()
                 {
                     Id = 2,
-                    Title = "C# Book",
+                    Title = ".NET WITH C# Book",
                     Author = "Thato",
-                    Description = "Advanced C-Sharp Postgraduate Edition"
+                    Description = "Advanced C-Sharp Postgraduate Edition",
+                    Category = "Frameworks",
+                    Language = "English",
+                    TotalPages = 4013
                 },
                 new BookModel()
                 {
                     Id = 3,
                     Title = "Java Book",
                     Author = "Percy",
-                    Description = "Introduction to mobile development with Java"
+                    Description = "Introduction to mobile development with Java",
+                    Category = "Programming",
+                    Language = "Afrikaans",
+                    TotalPages = 607
                 },
                 new BookModel()
                 {
                     Id = 4,
                     Title = "PHP Book",
                     Author = "Motaung TP",
-                    Description = "OBject Oriented Programming with Laravel"
+                    Description = "Object Oriented Programming with Laravel",
+                    Category = "Design",
+                    Language = "Swahili",
+                    TotalPages =1005
                 },
                 new BookModel()
                 {
                     Id = 5,
                     Title = "C# Book",
                     Author = "Percy",
-                    Description = "C-Sharp Fundamentals for Intermediate Level Learning"
+                    Description = "C-Sharp Fundamentals for Intermediate Level Learning",
+                    Category = "Enginnering",
+                    Language = "Swahilli",
+                    TotalPages =906
+                },
+                new BookModel()
+                {
+                    Id = 5,
+                    Title = "Azure DevOps",
+                    Author = "PecDe Vulture",
+                    Description = "DevOps Fundamentals in digital spaces",
+                    Category = "DevOps",
+                    Language = "English",
+                    TotalPages =1114
                 },
             };
          }
