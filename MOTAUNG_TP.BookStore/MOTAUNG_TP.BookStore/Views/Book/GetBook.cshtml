@@ -1,10 +1,10 @@
-﻿@model BookModel
+﻿@*@model BookModel*@
 @{
-    ViewData["Title"] = "Book: " + Model.Title;
+    ViewData["Title"] = "Book: " + Model.book.Title;
 }
 <div class="container">
 
-    <h1>Book Details</h1>
+    <h1>Book Details @Model.Name</h1>
 
     <div class="row">
         <div class="col-md-6">
@@ -39,19 +39,19 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h1>@Model.Title</h1>
+                    <h1>@Model.book.Title</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-primary">
                     <span class="label label-primary">By: </span>
-                    <span class="monospaced">@Model.Author</span>
+                    <span class="monospaced">@Model.book.Author</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <p>
-                        @Model.Description
+                        @Model.book.Description
                     </p>
                 </div>
             </div>
@@ -64,9 +64,9 @@
             </div>
             <hr />
             <ul class="list-group">
-                <li class="list-group-item"><span class="font-weight-bold">Category - </span>@Model.Category</li>
-                <li class="list-group-item"><span class="font-weight-bold">Total pages - </span>@Model.TotalPages</li>
-                <li class="list-group-item"><span class="font-weight-bold">Language - </span>@Model.Language</li>
+                <li class="list-group-item"><span class="font-weight-bold">Category - </span>@Model.book.Category</li>
+                <li class="list-group-item"><span class="font-weight-bold">Total pages - </span>@Model.book.TotalPages</li>
+                <li class="list-group-item"><span class="font-weight-bold">Language - </span>@Model.book.Language</li>
             </ul>
 
         </div>

@@ -2,16 +2,12 @@
 using MOTAUNG_TP.BookStore.Models;
 using MOTAUNG_TP.BookStore.Repository;
 using System.Collections.Generic;
+using System.Dynamic;
 
 namespace MOTAUNG_TP.BookStore.Controllers
 {
     public class BookController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
         //Define the type of the Repositoty
         private readonly BookRepository _bookRepository= null;
 
@@ -33,7 +29,11 @@ namespace MOTAUNG_TP.BookStore.Controllers
 
         public ViewResult GetBook(int id)
         {
-            var data =  _bookRepository.GetBookById(id);
+            dynamic data = new ExpandoObject();
+            data.book = _bookRepository.GetBookById(id);
+            data.Name = "Percy";
+
+            //var data =  ;
 
             return View(data);
 
